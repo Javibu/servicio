@@ -1,4 +1,4 @@
-'use strict'
+/*'use strict'
 const express = require('express')
 const http = require('http')
 const bodyParser=require('body-parser')
@@ -48,3 +48,13 @@ let app= express()
 .use('/todo',router)
 .use(express.static(__dirname+'/public'))
 .listen(3000)
+
+
+*/
+
+var http = require('http')
+var port = process.env.PORT || 1337;
+http.createServer(function(req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World\n');
+}).listen(port);
